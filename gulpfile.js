@@ -21,7 +21,7 @@
 
 // Include Gulp & Tools We'll Use
 var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
+var $ = require('gulp-load-plugins')({ camelize: true});
 var del = require('del');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
@@ -148,6 +148,15 @@ gulp.task('html', function () {
     .pipe($.size({title: 'html'}));
 });
 
+
+
+//Angular Template Cache
+gulp.task('angular-template-cache', function () {
+    gulp.src('app/scripts/**/*.tpl.html')
+        .pipe($.angularTemplatecache({ standalone:true}))
+        .pipe(gulp.dest('app/scripts'));
+});
+
 // Clean Output Directory
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
@@ -165,6 +174,7 @@ gulp.task('serve', function () {
   gulp.watch(['{.tmp,app}/styles/**/*.css'], ['styles:css', reload]);
   gulp.watch(['app/scripts/**/*.js'], ['jshint']);
   gulp.watch(['app/images/**/*'], reload);
+  gulp.watch(['app/scripts/**/*.tpl.html'], ['angular-template-cache']);
 });
 
 // Build and serve the output from the dist build

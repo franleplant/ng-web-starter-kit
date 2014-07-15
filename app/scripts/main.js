@@ -1,7 +1,9 @@
-angular.module('main', [])
+angular.module('main', [
+  'templates'
+])
 
 .controller('AppController', function ($scope){
 
-	$scope.test = "Hiiiiiiiiiii";
+	$scope.test = "Byeeeeeeeeeeeeeeeeeeeee";
 
 });

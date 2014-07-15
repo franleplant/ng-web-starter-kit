@@ -1,0 +1,1 @@
+angular.module("templates", []).run(["$templateCache", function($templateCache) {$templateCache.put("ex1.tpl.html","{{2 +2}}\n");}]);
