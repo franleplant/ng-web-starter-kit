@@ -1,0 +1,19 @@
+{
+  "name": "web-starter-kit",
+  "version": "0.0.0",
+  "authors": [
+    "franleplant <franleplant@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.20"
+  }
+}
