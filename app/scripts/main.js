@@ -3,7 +3,7 @@ angular.module('main', [
 ])
 
 .controller('AppController', function ($scope){
-
-	$scope.test = "Byeeeeeeeeeeeeeeeeeeeee";
+	'use strict';
+	$scope.test = 'Byeeeeeeeeeeeeeeeeeeeee';
 
 });
