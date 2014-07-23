@@ -40,7 +40,15 @@ Bring up a terminal and type `gulp --version`. If Gulp is installed it should re
 $ npm install --global gulp
 ```
 
-This will install Gulp globally. Depending on your user account, you may need to gain elevated permissions using `sudo` (i.e `sudo npm install --global gulp`). Next, install the local dependencies Web Starter Kit requires:
+This will install Gulp globally. Depending on your user account, you may need to gain elevated permissions using `sudo` (i.e `sudo npm install --global gulp`). 
+
+### Bower
+
+```sh
+$ npm install --global bower
+```
+
+Next, install the local dependencies Web Starter Kit requires:
 
 ```sh
 $ npm install
